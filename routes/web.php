@@ -13,9 +13,6 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
-Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 Route::get('/', function () {
     return view('welcome');

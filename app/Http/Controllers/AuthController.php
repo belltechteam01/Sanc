@@ -43,6 +43,7 @@ class AuthController extends Controller
     }
     public function me(Request $request)
     {
-        return "asdf";
+        $ret = $request->user();
+        return $ret;
     }
 }
