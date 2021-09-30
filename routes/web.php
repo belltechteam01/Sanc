@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileuploaddataController;
 use App\Http\Controllers\AuthController;
+// use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +17,9 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
+    // return view('twiliotest');
 });
-Route::get('/add-perform', [FileuploaddataController::class, 'addperform']);
+// Route::get('/add-perform', [FileuploaddataController::class, 'addperform']);
+Route::get('/', 'HomeController@show');
+Route::post('/', 'HomeController@storePhoneNumber');
+Route::post('/custom', 'HomeController@sendCustomMessage');
